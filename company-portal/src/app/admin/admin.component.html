@@ -1,0 +1,71 @@
+<!-- Admin Dashboard Header -->
+<h1 class="dashboard-heading">Admin Dashboard</h1>
+<h2 class="welcome-heading">Welcome Admin</h2>
+
+<!-- Action Buttons -->
+<div class="button-container">
+  <button (click)="loadcustomers()">Show Customers</button>
+  <button (click)="loadproducts()">Show Products</button>
+  <button (click)="loadtransactions()">Show Transactions</button>
+  <button (click)="addcustom()">Add Customer</button>
+  <button (click)="addproduct()">Add Product</button>
+  <button (click)="logout()">Logout</button>
+</div>
+
+<!-- Dashboard Summary Cards -->
+<div class="card-container">
+  <div class="summary-card customers">
+    <h4>Total Customers</h4>
+    <p>{{ totalCustomers }}</p>
+  </div>
+  <div class="summary-card products">
+    <h4>Total Products</h4>
+    <p>{{ totalProducts }}</p>
+  </div>
+  <div class="summary-card sales">
+    <h4>Total Sales</h4>
+    <p>₹{{ totalSales }}</p>
+  </div>
+</div>
+
+<!-- Tables -->
+<table *ngIf="customerlist.length > 0 && showcustom" class="styled-table">
+  <thead>
+    <tr><th>ID</th><th>Name</th><th>Phone</th><th>Address</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cust of customerlist">
+      <td>{{ cust.id }}</td>
+      <td>{{ cust.name }}</td>
+      <td>{{ cust.phn }}</td>
+      <td>{{ cust.address }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table *ngIf="productlist.length > 0 && showprod" class="styled-table">
+  <thead>
+    <tr><th>ID</th><th>Name</th><th>Price</th><th>Stock Qty</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prod of productlist">
+      <td>{{ prod.id }}</td>
+      <td>{{ prod.name }}</td>
+      <td>{{ prod.price }}</td>
+      <td>{{ prod.qty }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<table *ngIf="transactions.length > 0 && showtr" class="styled-table">
+  <thead>
+    <tr><th>Date</th><th>Bill Amount</th><th>Transaction ID</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tr of transactions">
+      <td>{{ tr.date }}</td>
+      <td>{{ tr.billamt }}</td>
+      <td>{{ tr.transactionid }}</td>
+    </tr>
+  </tbody>
+</table>

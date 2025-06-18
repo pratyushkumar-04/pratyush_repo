@@ -1,0 +1,76 @@
+/* Container setup */
+.transaction-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background: linear-gradient(135deg, #f0f8ff, #e0ecff);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  border-radius: 12px;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+}
+
+/* Heading */
+.transaction-container h2 {
+  color: #014c98;
+  margin-bottom: 25px;
+}
+
+/* Form layout */
+.transaction-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Form group styling */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Labels */
+.form-group label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+/* Inputs */
+.transaction-form input[type="date"],
+.transaction-form input[type="number"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.3s ease;
+}
+
+.transaction-form input:focus {
+  border-color: #014c98;
+  outline: none;
+}
+
+/* Button */
+.transaction-form button {
+  margin-top: 15px;
+  background-color: #014c98;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.transaction-form button:hover {
+  background-color: #012f63;
+}
+
+.transaction-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

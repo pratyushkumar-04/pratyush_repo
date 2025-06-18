@@ -1,0 +1,26 @@
+<div class="background">
+  <!-- Company Logo + Title -->
+  <div class="header">
+  </div>
+
+  <!-- Centered Login Box -->
+  <div class="login-container" *ngIf="!islogedin">
+    <form class="login-form" (ngSubmit)="onLogin()">
+      <h2>Enter Details</h2>
+
+      <label for="name">Username</label>
+      <input id="name" type="text" name="name" [(ngModel)]="name" required />
+
+      <label for="pwd">Password</label>
+      <input id="pwd" type="password" name="pwd" [(ngModel)]="pwd" required />
+
+      <button type="submit">Login</button>
+
+      <div *ngIf="errorMessage" class="error-msg">
+        {{ errorMessage }}
+      </div>
+    </form>
+  </div>
+
+  <router-outlet></router-outlet>
+</div>

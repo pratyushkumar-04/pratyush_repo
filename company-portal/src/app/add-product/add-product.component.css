@@ -1,0 +1,80 @@
+.add-product-container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  border-radius: 15px;
+  background: linear-gradient(210deg, #072779, #cccfd3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.add-product-container img {
+  width: 60px;
+  margin-bottom: 15px;
+  filter: brightness(0) invert(1);
+}
+
+.add-product-container h2 {
+  color: #f1f1f1;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.product-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #1b1818;
+}
+
+.product-form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  background-color: #f7f9fc;
+  color: #000;
+  transition: 0.3s;
+}
+
+.product-form input:focus {
+  outline: none;
+  border-color: #00c2ff;
+  box-shadow: 0 0 6px rgba(0, 194, 255, 0.5);
+}
+
+.product-form button {
+  background-color: #00c2ff;
+  color: navy;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.product-form button:hover {
+  background-color: #009dd1;
+  transform: translateY(-2px);
+}
+
+.product-form button:disabled {
+  background-color: #666;
+  color: #ccc;
+  cursor: not-allowed;
+}

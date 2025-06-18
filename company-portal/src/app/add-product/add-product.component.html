@@ -1,0 +1,27 @@
+<div class="add-product-container">
+  <h2>Add New Product</h2>
+
+  <form (ngSubmit)="addpr()" #studform="ngForm" class="product-form">
+    <div class="form-group">
+      <label for="id">Product ID</label>
+      <input type="number" id="id" name="id" [(ngModel)]="id" required />
+    </div>
+
+    <div class="form-group">
+      <label for="name">Product Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="name" required />
+    </div>
+
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" id="price" name="price" [(ngModel)]="price" required />
+    </div>
+
+    <div class="form-group">
+      <label for="qty">Stock Quantity</label>
+      <input type="number" id="qty" name="qty" [(ngModel)]="qty" required />
+    </div>
+
+    <button type="submit" [disabled]="studform.invalid">➕ Add Product</button>
+  </form>
+</div>

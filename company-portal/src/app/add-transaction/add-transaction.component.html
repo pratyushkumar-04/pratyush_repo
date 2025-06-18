@@ -1,0 +1,43 @@
+<div class="transaction-container">
+  <h2>Add New Transaction</h2>
+
+  <form (ngSubmit)="addTransaction()" #transactionForm="ngForm" class="transaction-form">
+    <div class="form-group">
+      <label for="date">Transaction Date:</label>
+      <input
+        type="date"
+        id="date"
+        name="date"
+        [(ngModel)]="transaction.date"
+        required
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="billamt">Bill Amount:</label>
+      <input
+        type="number"
+        id="billamt"
+        name="billamt"
+        [(ngModel)]="transaction.billamt"
+        required
+        min="1"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="transactionid">Transaction ID:</label>
+      <input
+        type="number"
+        id="transactionid"
+        name="transactionid"
+        [(ngModel)]="transaction.transactionid"
+        required
+      />
+    </div>
+
+    <button type="submit" [disabled]="transactionForm.invalid">
+      ➕ Add Transaction
+    </button>
+  </form>
+</div>

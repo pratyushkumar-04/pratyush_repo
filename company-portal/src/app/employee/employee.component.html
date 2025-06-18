@@ -1,0 +1,85 @@
+<div class="employee-dashboard">
+  
+  <div class="header">
+    <h1>Welcome Employee</h1>
+  </div>
+  <!-- Admin Dashboard Title -->
+<div class="admin-header">
+  <h1>Employee Dashboard</h1>
+</div>
+
+
+  <div class="button-panel">
+    <button (click)="viewcustomer()">Customer List</button>
+    <button (click)="Viewproducts()">Product List</button>
+    <button (click)="addtransaction()">Add Transaction</button>
+    <button (click)="showtransactions()">Sow Transactions</button>
+    <button (click)="addcustom()">Add Customer</button>
+    <button (click)="logout()" class="logout-btn">Logout</button>
+  </div>
+
+  <div *ngIf="customers.length > 0 && showcustom" class="table-container">
+    <h3>Customer List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Phone</th>
+          <th>Address</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cust of customers">
+          <td>{{ cust.id }}</td>
+          <td>{{ cust.name }}</td>
+          <td>{{ cust.phn }}</td>
+          <td>{{ cust.address }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="products.length > 0 && showprod" class="table-container">
+    <h3>Product List</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Stock Qty</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let prod of products">
+          <td>{{ prod.id }}</td>
+          <td>{{ prod.name }}</td>
+          <td>{{ prod.price }}</td>
+          <td>{{ prod.qty }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div *ngIf="transactions.length > 0 && showtr" class="table-container">
+    <h3>Transactions</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Bill Amount</th>
+          <th>Transaction ID</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tr of transactions">
+          <td>{{ tr.date }}</td>
+          <td>{{ tr.billamt }}</td>
+          <td>{{ tr.transactionid }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+

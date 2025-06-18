@@ -1,0 +1,110 @@
+/* Fullscreen Gradient Background */
+.background {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Company Header */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.company-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  letter-spacing: 2px;
+}
+
+.logo {
+  width: 80px;
+  margin-bottom: 10px;
+}
+
+/* Login Box */
+.login-container {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 35px 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  width: 360px;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Login Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form h2 {
+  margin-bottom: 25px;
+  color: #1e3c72;
+  text-align: center;
+}
+
+.login-form label {
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
+
+.login-form input {
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.login-form input:focus {
+  border-color: #2a5298;
+  box-shadow: 0 0 6px #2a5298aa;
+  outline: none;
+}
+
+/* Button Styling */
+.login-form button {
+  background: linear-gradient(to right, #2a5298, #1e3c72);
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.login-form button:hover {
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  transform: translateY(-2px);
+}
+
+/* Error Message */
+.error-msg {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+  text-align: center;
+}
